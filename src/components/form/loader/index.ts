@@ -2,7 +2,7 @@
 import { cloneDeep } from "lodash-es";
 import React, { Component, lazy } from "react";
 
-import { Button, Command, Image, Input, Select, Slider, Text, Textarea } from "../components";
+import { Button, Command, Input, Select, Slider, Text, Textarea } from "../components";
 import { AimComponentStore } from "../types";
 
 export type LayoutId = string
@@ -18,7 +18,6 @@ export const layoutData: LayoutData = {};
 export const localComponents: Record<string, typeof React.Component | React.FC<any>> = {
   "@components/Button": Button.default || Button,
   "@components/Text": Text.default || Text,
-  "@components/Image": Image.default || Image,
   "@components/Select": Select.default || Select,
   "@components/Slider": Slider.default || Slider,
   "@components/Input": Input.default || Input,
@@ -29,7 +28,6 @@ export const localComponents: Record<string, typeof React.Component | React.FC<a
 export const localComponentsProperties: Record<string, Array<any>> = {
   "@components/Button": Button.properties || [],
   "@components/Text": Text.properties || [],
-  "@components/Image": Image.properties || [],
   "@components/Select": Select.properties || [],
   "@components/Slider": Slider.properties || [],
   "@components/Input": Input.properties || [],
@@ -40,7 +38,6 @@ export const localComponentsProperties: Record<string, Array<any>> = {
 export const localComponentsData: Record<string, Record<string, any>> = {
   "@components/Button": Button.data || {},
   "@components/Text": Text.data || {},
-  "@components/Image": Image.data || {},
   "@components/Select": Select.data || [],
   "@components/Slider": Slider.data || [],
   "@components/Input": Input.data || [],
