@@ -1,7 +1,7 @@
 import { createRequiredLayout, createExposedLayout } from "./components/form/index";
-import FormRender, { FormRendererHandle } from "./components/form/FormRenderer";
+import FormRenderer, { FormRendererHandle } from "./components/form/FormRenderer";
 
-export { createRequiredLayout, createExposedLayout, FormRender };
+export { createRequiredLayout, createExposedLayout, FormRenderer };
 
 export type { FormRendererHandle };
 
