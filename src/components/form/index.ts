@@ -120,6 +120,7 @@ export function createExposedLayout(
   return layout;
 }
 
-export * from "./FormRender";
+export { default as FormRender } from "./FormRender";
+export type { FormRenderHandle } from "./FormRender";
 
 export * as layout from "./layout";
