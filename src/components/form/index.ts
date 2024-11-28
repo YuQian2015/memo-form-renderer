@@ -1,4 +1,3 @@
-import React from "react";
 import type { Manifest, ManifestConfiguration } from "@memo-plugins/manager";
 import { t } from "i18next";
 import { merge } from "lodash-es";
@@ -119,10 +118,3 @@ export function createExposedLayout(
 
   return layout;
 }
-
-export { default as FormRenderer } from "./FormRenderer";
-export type { FormRendererHandle } from "./FormRenderer";
-
-export * as layout from "./layout";
-
-export type { AimForm } from "./types";
