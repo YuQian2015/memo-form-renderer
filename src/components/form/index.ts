@@ -1,4 +1,4 @@
-import type { Manifest, ManifestConfiguration } from "@memo-plugins/manager";
+import type { Manifest, ManifestConfiguration } from "memo-plugin-manager";
 import { t } from "i18next";
 import { merge } from "lodash-es";
 
