@@ -75,7 +75,7 @@ export function createRequiredLayout(
     localStorageKey = pluginId + ":" + storageKey + ":" + configurationId;
   }
   const layout: AimForm<Partial<Record<string, any>>> = {
-    // TODO: 需要增加默认值传递，方便在FormRender使用
+    // TODO: 需要增加默认值传递，方便在FormRenderer使用
     storageValueKeys: configurationStorage,
     storageKey: localStorageKey,
     nodes: createConfiguration(configuration, configurationRequired, languagePrefix, file),
@@ -109,7 +109,7 @@ export function createExposedLayout(
   }
   const newConfiguration = configuration.filter(conf => configurationExposed.indexOf(conf.key) >= 0);
   const layout: AimForm<Partial<Record<string, any>>> = {
-    // TODO: 需要增加默认值传递，方便在FormRender使用
+    // TODO: 需要增加默认值传递，方便在FormRenderer使用
     storageValueKeys: configurationStorage,
     storageKey: localStorageKey,
     nodes: createConfiguration(newConfiguration, configurationRequired, languagePrefix, file),
@@ -120,7 +120,7 @@ export function createExposedLayout(
   return layout;
 }
 
-export { default as FormRender } from "./FormRender";
-export type { FormRenderHandle } from "./FormRender";
+export { default as FormRenderer } from "./FormRenderer";
+export type { FormRendererHandle } from "./FormRenderer";
 
 export * as layout from "./layout";

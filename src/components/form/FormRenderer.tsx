@@ -5,7 +5,7 @@ import { getComponent } from "./loader";
 import DynamicComponent from "./loader/DynamicComponent";
 import { AimComponent, AimForm } from "./types";
 
-interface FormRenderProps {
+interface FormRendererProps {
   layout: AimForm<Record<string, any>>
   className?: string
   onDataReady?: (data: Record<string, any>) => any
@@ -14,13 +14,13 @@ interface FormRenderProps {
 }
 
 // Define the handle types which will be passed to the forwardRef
-export type FormRenderHandle = {
+export type FormRendererHandle = {
   getFormData: () => Record<string, any>;
 };
 
-const FormRender = forwardRef<FormRenderHandle, FormRenderProps>(({
+const FormRenderer = forwardRef<FormRendererHandle, FormRendererProps>(({
   layout, className, onChange, onOpenChange, onDataReady
-}: FormRenderProps, ref) => {
+}: FormRendererProps, ref) => {
 
   const [formData, setFormData] = useState<Record<string, any>>({});
   const prevData = useRef<Record<string, any>>({});
@@ -71,7 +71,7 @@ const FormRender = forwardRef<FormRenderHandle, FormRenderProps>(({
         [n.name!]: changedData[1]
       }));
       if (layout.storageKey) {
-        // FIXME: 需要增加props默认值传递，方便在FormRender使用，同时支持多实例仅仅保存需要保存的字段，而不是把所有信息都存在里面
+        // FIXME: 需要增加props默认值传递，方便在FormRenderer使用，同时支持多实例仅仅保存需要保存的字段，而不是把所有信息都存在里面
         // const saveData = layout.storageValueKeys?.length ? pick(formData, layout.storageValueKeys) : formData
         // localStorage.setItem(layout.storageKey, JSON.stringify(saveData))
         localStorage.setItem(layout.storageKey, JSON.stringify(formData));
@@ -116,4 +116,4 @@ const FormRender = forwardRef<FormRenderHandle, FormRenderProps>(({
   </div>;
 });
 
-export default memo(FormRender);
+export default memo(FormRenderer);
