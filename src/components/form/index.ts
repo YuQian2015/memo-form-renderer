@@ -1,4 +1,4 @@
-
+import React from "react";
 import type { Manifest, ManifestConfiguration } from "@memo-plugins/manager";
 import { t } from "i18next";
 import { merge } from "lodash-es";
