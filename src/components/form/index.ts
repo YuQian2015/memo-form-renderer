@@ -124,3 +124,5 @@ export { default as FormRenderer } from "./FormRenderer";
 export type { FormRendererHandle } from "./FormRenderer";
 
 export * as layout from "./layout";
+
+export type { AimForm } from "./types";
