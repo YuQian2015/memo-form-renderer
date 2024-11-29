@@ -1,5 +1,5 @@
 import React, { ComponentType, Suspense, useMemo } from "react";
-import ReactDom from "react-dom";
+import * as ReactDom from "react-dom";
 
 import ErrorBoundary from "../../ErrorBoundary";
 import { isWebURL } from "../../../utils";
