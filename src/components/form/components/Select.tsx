@@ -1,14 +1,14 @@
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea } from "../../ui/scroll-area";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "../../ui/select";
 
 import { AimComponentStore, BaseComponentProps } from "../types";
 

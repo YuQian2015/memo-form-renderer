@@ -4,7 +4,7 @@ import { default as UITextarea } from "react-expanding-textarea";
 import { useTranslation } from "react-i18next";
 import { TbInfoCircle } from "react-icons/tb";
 
-import { AimTooltip } from "@/components";
+import AimTooltip from "../../AimTooltip";
 
 import { AimComponentStore, BaseComponentProps } from "../types";
 

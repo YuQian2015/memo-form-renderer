@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Component, MouseEvent, ReactNode } from "react";
 import { TbChecks, TbCopy, TbX } from "react-icons/tb";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 
 
 interface ErrorBoundaryProps {

@@ -2,8 +2,8 @@ import { ChangeEventHandler } from "react";
 import { useTranslation } from "react-i18next";
 import { TbInfoCircle } from "react-icons/tb";
 
-import { AimTooltip } from "@/components";
-import { Input as UIInput } from "@/components/ui/input";
+import AimTooltip from "../../AimTooltip";
+import { Input as UIInput } from "../../ui/input";
 
 import { AimComponentStore, BaseComponentProps } from "../types";
 

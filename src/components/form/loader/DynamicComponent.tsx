@@ -1,8 +1,8 @@
 import React, { ComponentType, Suspense, useMemo } from "react";
 import ReactDom from "react-dom";
 
-import ErrorBoundary from "@/components/ErrorBoundary";
-import { isWebURL } from "@/utils";
+import ErrorBoundary from "../../ErrorBoundary";
+import { isWebURL } from "../../../utils";
 
 import FetchRemoteComponent from "./FetchRemoteComponent";
 import { AimNode } from "../types";

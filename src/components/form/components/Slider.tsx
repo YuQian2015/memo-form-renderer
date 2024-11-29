@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 
-import { Slider } from "@/components/ui/slider";
+import { Slider } from "../../ui/slider";
 
 import { AimComponentStore, BaseComponentProps } from "../types";
 

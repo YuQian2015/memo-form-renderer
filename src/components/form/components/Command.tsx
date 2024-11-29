@@ -2,15 +2,15 @@ import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { TbCheck } from "react-icons/tb";
 
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, } from "@/components/ui/command";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, } from "../../ui/command";
+import { ScrollArea } from "../../ui/scroll-area";
 import {
   Select,
   SelectContent,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { cn } from "@/lib/utils";
+} from "../../ui/select";
+import { cn } from "../../../lib/utils";
 
 import { AimComponentStore, BaseComponentProps } from "../types";
 
