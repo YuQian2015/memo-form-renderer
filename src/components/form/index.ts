@@ -1,4 +1,4 @@
-import type { Manifest, ManifestConfiguration } from "memo-plugin-manager";
+import type { Manifest, ManifestConfiguration, PluginReturnType, Plugin } from "memo-plugin-manager";
 import { t } from "i18next";
 import { merge } from "lodash-es";
 
@@ -118,3 +118,20 @@ export function createExposedLayout(
 
   return layout;
 }
+
+export function getDefaultPluginFormData(plugin?: Plugin, plugins?: PluginReturnType) {
+  const data: Record<string, any> = {};
+
+  if (plugin) {
+    const configuration = plugins?.installedPluginsManifests?.[plugin.pluginId].configuration || [];
+    const pluginsConfigurations = plugins?.pluginsConfigurations?.[`${plugin.pluginId}@${plugin.version}`] || {};
+    const defaultData = plugins?.installedPluginsManifests?.[plugin.pluginId].defaultsConfiguration || {};
+    configuration.forEach((item) => {
+      if (item.key) {
+        data[item.key] = pluginsConfigurations[item.key] || defaultData[item.key];
+      }
+    });
+  }
+
+  return data;
+};
