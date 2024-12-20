@@ -1,4 +1,4 @@
-export { createRequiredLayout, createExposedLayout } from "./form/index";
+export { createRequiredLayout, createExposedLayout, getDefaultPluginFormData } from "./form/index";
 export type { FormRendererHandle } from "./form/FormRenderer";
 
 export { default as FormRenderer } from "./form/FormRenderer";
